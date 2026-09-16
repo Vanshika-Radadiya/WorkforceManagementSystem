@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+﻿# Workforce Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-stack employee management application built with Spring Boot for the backend and React for the frontend. It allows users to manage employee records, including viewing all employees, adding new employees, updating details, and deleting records.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- Backend: Java 17, Spring Boot 3.2, Spring Data JPA, Maven
+- Frontend: React 18, React Router, Axios, Bootstrap
+- Database: H2 database
+- Build Tools: Maven, npm
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```text
+WorkforceManagementSystem/
+├── WF_Backend/                 # Spring Boot REST API
+│   ├── src/main/java/...       # Java classes for controller, model, repository, service
+│   ├── src/main/resources/     # application.properties
+│   ├── pom.xml                 # Maven dependencies and config
+│   └── mvnw / mvnw.cmd         # Maven wrapper
+├── WF_Frontend/                # React frontend
+│   ├── src/                    # App, components, services
+│   ├── public/                 # Static assets
+│   ├── package.json            # npm dependencies and scripts
+│   └── README.md               # Frontend README
+├── README.md                   # Project documentation
+└── .gitignore
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- Java 17+
+- Maven
+- Node.js and npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run the Backend
 
-### `npm run build`
+```bash
+cd WF_Backend
+./mvnw spring-boot:run
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+On Windows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```powershell
+cd WF_Backend
+mvnw.cmd spring-boot:run
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Backend URL:
 
-### `npm run eject`
+- http://localhost:8080
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Run the Frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd WF_Frontend
+npm install
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Start the backend.
+2. Start the frontend.
+3. Open the browser at http://localhost:3000.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
